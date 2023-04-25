@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     
     var orderBody = OrderResponse(records: [])
     
-    var uploardField = OrderBody(id: "", fields: OrderData(name: "", sugar: "", ice: "", size: "", price: 0, image: URL(string: ""), human: "", whiteBubble: false, whiteJelly: false, sweetAlmond: false))
+    var uploardField = OrderBody(fields: OrderData(name: "", sugar: "", ice: "", size: "", price: 0, image: URL(string: ""), human: "", whiteBubble: false, whiteJelly: false, sweetAlmond: false))
     
     var addShopCart = OrderData(name: "", sugar: "全糖", ice: "正常", size: "中", price: 0, image: URL(string: ""), human: "", whiteBubble: false, whiteJelly: false, sweetAlmond: false)
     
@@ -156,7 +156,7 @@ class DetailViewController: UIViewController {
     
     func postFetch(){
         // 將選好的飲料內容儲存到預先建立好的變數中，以達到符合上傳的JSON格式的 Model。
-        uploardField = OrderBody(id: allDrinks[indexPathRowNum].id , fields: addShopCart)
+        uploardField = OrderBody(fields: addShopCart)
         // 此為專屬 for 儲存訂購飲料的後台 table 網址，與儲存全部飲料的菜單網址不同，但專案 ID api_key 是同一個。
         let urlString = "https://api.airtable.com/v0/app8qDE2IVOV4sQFh/kebukeOrderList"
         if let url = URL(string: urlString){

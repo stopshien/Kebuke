@@ -12,7 +12,7 @@ struct OrderResponse:Codable{
 }
 
 struct OrderBody:Codable{
-    var id : String //上傳資料中沒有id 若加進去會找不到資料，猜測可用optional或是直接不用後台會自己加入
+//    let id : String //上傳資料中沒有id 若加進去會找不到資料，猜測可用optional或是直接不用後台會自己加入
     let fields : OrderData
 }
 struct OrderData:Codable{
