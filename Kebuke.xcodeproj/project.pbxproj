@@ -9,21 +9,34 @@
 /* Begin PBXBuildFile section */
 		CF3A51FD29F285FB002D8F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A51FC29F285FB002D8F09 /* AppDelegate.swift */; };
 		CF3A51FF29F285FB002D8F09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A51FE29F285FB002D8F09 /* SceneDelegate.swift */; };
-		CF3A520129F285FB002D8F09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A520029F285FB002D8F09 /* ViewController.swift */; };
 		CF3A520429F285FB002D8F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A520229F285FB002D8F09 /* Main.storyboard */; };
 		CF3A520629F285FC002D8F09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3A520529F285FC002D8F09 /* Assets.xcassets */; };
 		CF3A520929F285FC002D8F09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A520729F285FC002D8F09 /* LaunchScreen.storyboard */; };
+		CF3A521129F2862B002D8F09 /* KebukeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A521029F2862B002D8F09 /* KebukeMainViewController.swift */; };
+		CF3A521329F28657002D8F09 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A521229F28657002D8F09 /* Model.swift */; };
+		CF3A521729F288A1002D8F09 /* KebukeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A521629F288A1002D8F09 /* KebukeTableViewCell.swift */; };
+		CF3A521A29F30DDE002D8F09 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CF3A521929F30DDE002D8F09 /* Kingfisher */; };
+		CF3A521E29F31D34002D8F09 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A521D29F31D34002D8F09 /* DetailViewController.swift */; };
+		CFF54CB929F477C200CEB598 /* OrderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CB829F477C200CEB598 /* OrderDataModel.swift */; };
+		CFF54CBB29F5559200CEB598 /* ShopCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CBA29F5559200CEB598 /* ShopCartTableViewCell.swift */; };
+		CFF54CBD29F555C700CEB598 /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CBC29F555C700CEB598 /* ShopCartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF3A51F929F285FB002D8F09 /* Kebuke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kebuke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3A51FC29F285FB002D8F09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF3A51FE29F285FB002D8F09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF3A520029F285FB002D8F09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF3A520329F285FB002D8F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF3A520529F285FC002D8F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF3A520829F285FC002D8F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3A520A29F285FC002D8F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF3A521029F2862B002D8F09 /* KebukeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KebukeMainViewController.swift; sourceTree = "<group>"; };
+		CF3A521229F28657002D8F09 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CF3A521629F288A1002D8F09 /* KebukeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KebukeTableViewCell.swift; sourceTree = "<group>"; };
+		CF3A521D29F31D34002D8F09 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CFF54CB829F477C200CEB598 /* OrderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDataModel.swift; sourceTree = "<group>"; };
+		CFF54CBA29F5559200CEB598 /* ShopCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartTableViewCell.swift; sourceTree = "<group>"; };
+		CFF54CBC29F555C700CEB598 /* ShopCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3A521A29F30DDE002D8F09 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +72,27 @@
 			children = (
 				CF3A51FC29F285FB002D8F09 /* AppDelegate.swift */,
 				CF3A51FE29F285FB002D8F09 /* SceneDelegate.swift */,
-				CF3A520029F285FB002D8F09 /* ViewController.swift */,
 				CF3A520229F285FB002D8F09 /* Main.storyboard */,
 				CF3A520529F285FC002D8F09 /* Assets.xcassets */,
 				CF3A520729F285FC002D8F09 /* LaunchScreen.storyboard */,
 				CF3A520A29F285FC002D8F09 /* Info.plist */,
+				CF3A521629F288A1002D8F09 /* KebukeTableViewCell.swift */,
+				CFF54CBA29F5559200CEB598 /* ShopCartTableViewCell.swift */,
+				CF3A521229F28657002D8F09 /* Model.swift */,
+				CFF54CB829F477C200CEB598 /* OrderDataModel.swift */,
+				CF3A521F29F44853002D8F09 /* Controller */,
 			);
 			path = Kebuke;
+			sourceTree = "<group>";
+		};
+		CF3A521F29F44853002D8F09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF3A521029F2862B002D8F09 /* KebukeMainViewController.swift */,
+				CF3A521D29F31D34002D8F09 /* DetailViewController.swift */,
+				CFF54CBC29F555C700CEB598 /* ShopCartViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +111,9 @@
 			dependencies = (
 			);
 			name = Kebuke;
+			packageProductDependencies = (
+				CF3A521929F30DDE002D8F09 /* Kingfisher */,
+			);
 			productName = Kebuke;
 			productReference = CF3A51F929F285FB002D8F09 /* Kebuke.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +142,9 @@
 				Base,
 			);
 			mainGroup = CF3A51F029F285FB002D8F09;
+			packageReferences = (
+				CF3A521829F30DDE002D8F09 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = CF3A51FA29F285FB002D8F09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF3A520129F285FB002D8F09 /* ViewController.swift in Sources */,
+				CF3A521729F288A1002D8F09 /* KebukeTableViewCell.swift in Sources */,
 				CF3A51FD29F285FB002D8F09 /* AppDelegate.swift in Sources */,
 				CF3A51FF29F285FB002D8F09 /* SceneDelegate.swift in Sources */,
+				CF3A521129F2862B002D8F09 /* KebukeMainViewController.swift in Sources */,
+				CF3A521329F28657002D8F09 /* Model.swift in Sources */,
+				CFF54CBB29F5559200CEB598 /* ShopCartTableViewCell.swift in Sources */,
+				CFF54CBD29F555C700CEB598 /* ShopCartViewController.swift in Sources */,
+				CFF54CB929F477C200CEB598 /* OrderDataModel.swift in Sources */,
+				CF3A521E29F31D34002D8F09 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +333,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +361,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF3A521829F30DDE002D8F09 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF3A521929F30DDE002D8F09 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF3A521829F30DDE002D8F09 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF3A51F129F285FB002D8F09 /* Project object */;
 }
