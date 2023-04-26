@@ -44,7 +44,7 @@ class KebukeMainViewController: UIViewController {
 
     func fetchGetData(){
         
-        let kebukeURLString = "https://api.airtable.com/v0/app8qDE2IVOV4sQFh/kebuke".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let kebukeURLString = "https://api.airtable.com/v0/app8qDE2IVOV4sQFh/kebuke?sort[][field]=midPrice&sort[][direction]=asc".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         if let url = URL(string: kebukeURLString){
             var request = URLRequest(url: url)
             request.setValue("Bearer keyTaDO1pC3Wi8kV3", forHTTPHeaderField: "Authorization")

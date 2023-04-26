@@ -15,12 +15,14 @@ struct OrderBody:Codable{
 //    let id : String //上傳資料中沒有id 若加進去會找不到資料，猜測可用optional或是直接不用後台會自己加入
     let fields : OrderData
 }
+
+
 struct OrderData:Codable{
     
     var name : String
-    var sugar : String?
-    var ice : String?
-    var size : String?
+    var sugar : String
+    var ice : String
+    var size : String
     var price : Int?
     var image : URL?
     var human : String

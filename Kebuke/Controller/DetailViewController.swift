@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
     
     var uploardField = OrderBody(fields: OrderData(name: "", sugar: "", ice: "", size: "", price: 0, image: URL(string: ""), human: "", whiteBubble: false, whiteJelly: false, sweetAlmond: false))
     
-    var addShopCart = OrderData(name: "", sugar: "全糖", ice: "正常", size: "中", price: 0, image: URL(string: ""), human: "", whiteBubble: false, whiteJelly: false, sweetAlmond: false)
+    var addShopCart = OrderData(name: "", sugar: "全糖", ice: "正常冰", size: "中", price: 0, image: URL(string: ""), human: "", whiteBubble: false, whiteJelly: false, sweetAlmond: false)
     
     var indexPathRowNum = 0
     
