@@ -21,6 +21,9 @@
 		CFF54CBB29F5559200CEB598 /* ShopCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CBA29F5559200CEB598 /* ShopCartTableViewCell.swift */; };
 		CFF54CBD29F555C700CEB598 /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CBC29F555C700CEB598 /* ShopCartViewController.swift */; };
 		CFF54CBF29F7BAF600CEB598 /* ShopCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CBE29F7BAF600CEB598 /* ShopCartModel.swift */; };
+		CFF54CC129F9502400CEB598 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CC029F9502400CEB598 /* ReviseViewController.swift */; };
+		CFF54CC329F96D2A00CEB598 /* ReviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CC229F96D2A00CEB598 /* ReviceTableViewCell.swift */; };
+		CFF54CC529F96D5200CEB598 /* Revise2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CC429F96D5200CEB598 /* Revise2TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		CFF54CBA29F5559200CEB598 /* ShopCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartTableViewCell.swift; sourceTree = "<group>"; };
 		CFF54CBC29F555C700CEB598 /* ShopCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartViewController.swift; sourceTree = "<group>"; };
 		CFF54CBE29F7BAF600CEB598 /* ShopCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartModel.swift; sourceTree = "<group>"; };
+		CFF54CC029F9502400CEB598 /* ReviseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
+		CFF54CC229F96D2A00CEB598 /* ReviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviceTableViewCell.swift; sourceTree = "<group>"; };
+		CFF54CC429F96D5200CEB598 /* Revise2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revise2TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 				CF3A520A29F285FC002D8F09 /* Info.plist */,
 				CF3A521629F288A1002D8F09 /* KebukeTableViewCell.swift */,
 				CFF54CBA29F5559200CEB598 /* ShopCartTableViewCell.swift */,
+				CFF54CC229F96D2A00CEB598 /* ReviceTableViewCell.swift */,
+				CFF54CC429F96D5200CEB598 /* Revise2TableViewCell.swift */,
 				CF3A521229F28657002D8F09 /* Model.swift */,
 				CFF54CB829F477C200CEB598 /* OrderDataModel.swift */,
 				CFF54CBE29F7BAF600CEB598 /* ShopCartModel.swift */,
@@ -94,6 +102,7 @@
 				CF3A521029F2862B002D8F09 /* KebukeMainViewController.swift */,
 				CF3A521D29F31D34002D8F09 /* DetailViewController.swift */,
 				CFF54CBC29F555C700CEB598 /* ShopCartViewController.swift */,
+				CFF54CC029F9502400CEB598 /* ReviseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,11 +185,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF3A521729F288A1002D8F09 /* KebukeTableViewCell.swift in Sources */,
+				CFF54CC529F96D5200CEB598 /* Revise2TableViewCell.swift in Sources */,
 				CF3A51FD29F285FB002D8F09 /* AppDelegate.swift in Sources */,
 				CF3A51FF29F285FB002D8F09 /* SceneDelegate.swift in Sources */,
 				CF3A521129F2862B002D8F09 /* KebukeMainViewController.swift in Sources */,
 				CF3A521329F28657002D8F09 /* Model.swift in Sources */,
+				CFF54CC329F96D2A00CEB598 /* ReviceTableViewCell.swift in Sources */,
 				CFF54CBB29F5559200CEB598 /* ShopCartTableViewCell.swift in Sources */,
+				CFF54CC129F9502400CEB598 /* ReviseViewController.swift in Sources */,
 				CFF54CBD29F555C700CEB598 /* ShopCartViewController.swift in Sources */,
 				CFF54CB929F477C200CEB598 /* OrderDataModel.swift in Sources */,
 				CF3A521E29F31D34002D8F09 /* DetailViewController.swift in Sources */,

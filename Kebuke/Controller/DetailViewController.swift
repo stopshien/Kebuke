@@ -74,6 +74,12 @@ class DetailViewController: UIViewController {
         
     }
     
+//    //需要在修改回傳畫面前先檢查需要的東西是否有填上
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        //暫時先不使用看看
+//    }
+    
+    
     
     @IBAction func addSwitchButtons(_ sender: UISwitch) {
         switch sender.tag{
@@ -128,6 +134,7 @@ class DetailViewController: UIViewController {
         }
 
     
+    // 要加入判定是修改還是新增，還沒加
     @IBAction func addChooseList(_ sender: UIButton) {
         // 在按下購物車的時候會先將價格更新
             addShopCart.price = price

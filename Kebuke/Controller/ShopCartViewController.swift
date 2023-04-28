@@ -36,6 +36,10 @@ class ShopCartViewController: UIViewController {
     }
     
 
+    @IBAction func unwindToDetailViewController(_ unwindSegue: UIStoryboardSegue) {
+        fetchShopCartList()
+    }
+
     
     func deleteDrinkTask(){
         let shopCartURL = "https://api.airtable.com/v0/app8qDE2IVOV4sQFh/kebukeOrderList"
@@ -113,16 +117,32 @@ extension ShopCartViewController:UITableViewDelegate,UITableViewDataSource{
         }
         
         //計算有無加料以及金額，主要用在每個飲料的說明中
-        func caculateAddMoney(){
-            if indexPathForRowItem.whiteBubble == true{
-                
+        
+            var bubbleToInfo : String{
+             
+                if indexPathForRowItem.whiteBubble == true {
+                    return " 白玉"
+                }
+                return ""
             }
+        var jellyToInfo : String{
+         
+            if indexPathForRowItem.whiteJelly == true {
+                return " 水玉"
+            }
+            return ""
         }
-       
-        cell.drinkAdjust.text = "\(indexPathForRowItem.size)杯 \(indexPathForRowItem.sugar) \(indexPathForRowItem.ice)"
         
-        
-        
+        var almondToInfo : String{
+         
+            if indexPathForRowItem.sweetAlmond == true {
+                return " 甜杏"
+            }
+            return ""
+        }
+     
+        cell.drinkAdjust.text = "\(indexPathForRowItem.size)杯 \(indexPathForRowItem.sugar) \(indexPathForRowItem.ice)\(bubbleToInfo)\(jellyToInfo)\(almondToInfo)"
+  
         return cell
     }
     
@@ -147,9 +167,14 @@ extension ShopCartViewController:UITableViewDelegate,UITableViewDataSource{
              return trailingSwipConfiguration
          }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(indexPath.row,shopCartListArray, shopCartListArray[indexPathForRow].id)
-//    }
+    // 按下cell 後切換到修改畫面，並將當格cell資料傳至修改頁面，故在修改頁面沒有進行後台的下載串接
+    // 直接使用 pushViewController 來進行頁面的切換，沒有在ＳＢ另外拉 segue ，需要在ＳＢ中設定 storyboardID。
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+//        if let controller = storyboard?.instantiateViewController(withIdentifier: "reviseSB") as? ReviseViewController {
+//            navigationController?.pushViewController(controller, animated: true)
+//            controller.reviseDrink = shopCartListArray[indexPath.row]
+//        }
+    }
     
-    // 點選後 indexPath的數字都一樣，
 }
