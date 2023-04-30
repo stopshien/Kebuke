@@ -64,18 +64,20 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var totalMoney: UILabel!
     
+    @IBOutlet weak var addCartNReviseButtonOutlet: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        uploardField.id = allDrinks[indexPathRowNum].id
         if allDrinks.isEmpty{
+            addCartNReviseButtonOutlet.setTitle("修改", for: .normal)
             fetchGetData()
             drinkTitleName.text = addShopCart.name
             orderHumanTextField.text = addShopCart.human
             addUISwitchReivseSet()
 
         }else{
+            addCartNReviseButtonOutlet.setTitle("加入購物車", for: .normal)
             price = Int(allDrinks[indexPathRowNum].fields.midPrice) ?? 0
             setImage()
             sugarButtonSet()
@@ -167,14 +169,21 @@ class DetailViewController: UIViewController {
     // 要加入判定是修改還是新增，還沒加
     @IBAction func addChooseList(_ sender: UIButton) {
         if allDrinks.isEmpty{
-            reviseFetch()
-
-            let controller = UIAlertController(title: "修改完成", message: "可繼續修改或按右上角購物車回到訂購清單", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default) { _ in
-//                self.navigationController?.popViewController(animated: true)
+            if orderHumanTextField.text != ""{
+                reviseFetch()
+                let controller = UIAlertController(title: "修改完成", message: "可繼續修改或按右上角購物車回到訂購清單", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default) { _ in
+                    //                self.navigationController?.popViewController(animated: true)
+                }
+                controller.addAction(action)
+                present(controller, animated: true)
+            }else{
+                // 出現alert請填寫訂購者稱呼
+                let controller = UIAlertController(title: "請輸入訂購者", message: "不輸入就不用喝了", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default)
+                controller.addAction(action)
+                present(controller, animated: true)
             }
-            controller.addAction(action)
-            present(controller, animated: true)
         }else{
             // 在按下購物車的時候會先將價格更新
             addShopCart.price = price

@@ -580,6 +580,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addCartNReviseButtonOutlet" destination="adt-2e-N6N" id="V6Z-he-UlA"/>
                         <outlet property="addSweetAlmond" destination="ENm-qM-hpZ" id="UcY-Rd-Yys"/>
                         <outlet property="addWaterJelly" destination="aUa-xu-dmp" id="HVH-UU-HIg"/>
                         <outlet property="addWhiteBubble" destination="8cf-s0-Nqc" id="kh5-3C-7kb"/>
@@ -746,6 +747,13 @@
                                     <action selector="reviseButton:" destination="vhi-d7-eGO" eventType="touchUpInside" id="wTh-QN-Zf1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="測試用畫面，沒有使用到，可忽略" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-B8-PDI">
+                                <rect key="frame" x="13" y="70" width="388" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YE8-ge-axi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

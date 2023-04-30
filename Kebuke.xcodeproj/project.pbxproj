@@ -23,7 +23,6 @@
 		CFF54CBF29F7BAF600CEB598 /* ShopCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CBE29F7BAF600CEB598 /* ShopCartModel.swift */; };
 		CFF54CC129F9502400CEB598 /* ReviseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CC029F9502400CEB598 /* ReviseViewController.swift */; };
 		CFF54CC329F96D2A00CEB598 /* ReviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CC229F96D2A00CEB598 /* ReviceTableViewCell.swift */; };
-		CFF54CC529F96D5200CEB598 /* Revise2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF54CC429F96D5200CEB598 /* Revise2TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +43,6 @@
 		CFF54CBE29F7BAF600CEB598 /* ShopCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartModel.swift; sourceTree = "<group>"; };
 		CFF54CC029F9502400CEB598 /* ReviseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviseViewController.swift; sourceTree = "<group>"; };
 		CFF54CC229F96D2A00CEB598 /* ReviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviceTableViewCell.swift; sourceTree = "<group>"; };
-		CFF54CC429F96D5200CEB598 /* Revise2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revise2TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +85,6 @@
 				CF3A521629F288A1002D8F09 /* KebukeTableViewCell.swift */,
 				CFF54CBA29F5559200CEB598 /* ShopCartTableViewCell.swift */,
 				CFF54CC229F96D2A00CEB598 /* ReviceTableViewCell.swift */,
-				CFF54CC429F96D5200CEB598 /* Revise2TableViewCell.swift */,
 				CF3A521229F28657002D8F09 /* Model.swift */,
 				CFF54CB829F477C200CEB598 /* OrderDataModel.swift */,
 				CFF54CBE29F7BAF600CEB598 /* ShopCartModel.swift */,
@@ -185,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF3A521729F288A1002D8F09 /* KebukeTableViewCell.swift in Sources */,
-				CFF54CC529F96D5200CEB598 /* Revise2TableViewCell.swift in Sources */,
 				CF3A51FD29F285FB002D8F09 /* AppDelegate.swift in Sources */,
 				CF3A51FF29F285FB002D8F09 /* SceneDelegate.swift in Sources */,
 				CF3A521129F2862B002D8F09 /* KebukeMainViewController.swift in Sources */,
