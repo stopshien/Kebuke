@@ -31,13 +31,13 @@ class ShopCartViewController: UIViewController {
         fetchShopCartList()
     }
     
+    // 右上角navigationbar 的回到menu
     @IBAction func backToMenuButton(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
     
 
     @IBAction func unwindToDetailViewController(_ unwindSegue: UIStoryboardSegue) {
-        fetchShopCartList()
     }
 
     
@@ -96,6 +96,17 @@ class ShopCartViewController: UIViewController {
         
     }
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//
+//        if let controller = segue.destination as? DetailViewController,
+//           let row = tableView.indexPathForSelectedRow?.row {
+//
+//            controller.lover = lovers[row]
+//        }
+//    }
+    
 }
 
 extension ShopCartViewController:UITableViewDelegate,UITableViewDataSource{
@@ -171,10 +182,11 @@ extension ShopCartViewController:UITableViewDelegate,UITableViewDataSource{
     // 直接使用 pushViewController 來進行頁面的切換，沒有在ＳＢ另外拉 segue ，需要在ＳＢ中設定 storyboardID。
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-//        if let controller = storyboard?.instantiateViewController(withIdentifier: "reviseSB") as? ReviseViewController {
-//            navigationController?.pushViewController(controller, animated: true)
-//            controller.reviseDrink = shopCartListArray[indexPath.row]
-//        }
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "detailSB") as? DetailViewController {
+            navigationController?.pushViewController(controller, animated: true)
+            controller.addShopCart = shopCartListArray[indexPath.row].fields
+            controller.reviseDrink = shopCartListArray[indexPath.row]
+        }
     }
     
 }

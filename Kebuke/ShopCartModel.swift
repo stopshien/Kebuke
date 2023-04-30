@@ -12,7 +12,7 @@ struct OrderResponseForCart:Codable{
 }
 
 struct OrderBodyForCart:Codable{
-        let id : String //上傳資料中沒有id 若加進去會找不到資料，猜測可用optional或是直接不用後台會自己加入
+        var id : String //上傳資料中沒有id 若加進去會找不到資料，猜測可用optional或是直接不用後台會自己加入
 //        let createdTime : String
         var fields : OrderData
 }

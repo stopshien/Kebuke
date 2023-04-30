@@ -22,6 +22,8 @@ class ReviceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var addCheckButton: UIButton!
     
+    @IBOutlet weak var addCheckImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

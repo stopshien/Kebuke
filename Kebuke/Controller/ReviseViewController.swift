@@ -151,8 +151,38 @@ class ReviseViewController: UIViewController {
     
     @IBAction func circleButton(_ sender: UIButton) {
         
+//        var reviseDrinkField = reviseDrink.fields
+//        if reviseTableView.indexPathForSelectedRow?.section == 3{
+//            if reviseTableView.indexPathForSelectedRow?.row == 0{
+//                if reviseDrinkField.whiteBubble == false{
+//                    sender.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
+//                    reviseDrinkField.price! += 10
+//                    print(reviseDrinkField.whiteBubble!,reviseDrinkField.price!)
+//                }else{
+//                    sender.setImage(UIImage(systemName: "circle"), for: .normal)
+//                    reviseDrinkField.price! -= 10
+//                    print(reviseDrinkField.whiteBubble!,reviseDrinkField.price!)
+//
+//                }
+//            }
+//        }
             
             }
+    func setButton(){
+        var reviseDrinkField = reviseDrink.fields
+        if reviseTableView.indexPathForSelectedRow?.section == 3{
+            if reviseTableView.indexPathForSelectedRow?.row == 0{
+                if reviseDrinkField.whiteBubble == false{
+                    reviseDrinkField.price! += 10
+                    print(reviseDrinkField.whiteBubble!,reviseDrinkField.price!)
+                }else{
+                    reviseDrinkField.price! -= 10
+                    print(reviseDrinkField.whiteBubble!,reviseDrinkField.price!)
+                    
+                }
+            }
+        }
+    }
     
     
 
@@ -164,10 +194,10 @@ extension ReviseViewController:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        if section < 3{
-            return 1
-        }else{
+        if section == 3{
             return 3
+        }else{
+            return 1
         }
         
     }
@@ -194,23 +224,81 @@ extension ReviseViewController:UITableViewDelegate,UITableViewDataSource{
         default:
             id = "ReviceTableViewCell"
             let cell = reviseTableView.dequeueReusableCell(withIdentifier: "\(id)") as! ReviceTableViewCell
+            
+            let reviseField = reviseDrink.fields
             if indexPath.row == 0{
                 cell.addLabel.text = "加白玉"
                 cell.addMoneyLabel.text = "+10"
+                if reviseField.whiteBubble == true{
+                    cell.addCheckImageView.image = UIImage(systemName: "checkmark.circle")
+                }else{
+                    cell.addCheckImageView.image = UIImage(systemName: "circle")
+                }
             
             }
             if indexPath.row == 1{
                 cell.addLabel.text = "加水玉"
                 cell.addMoneyLabel.text = "+10"
+                if reviseField.whiteJelly == true{
+                    cell.addCheckImageView.image = UIImage(systemName: "checkmark.circle")
+                }else{
+                    cell.addCheckImageView.image = UIImage(systemName: "circle")
+                }
             }
             if indexPath.row == 2{
                 cell.addLabel.text = "加甜杏"
                 cell.addMoneyLabel.text = "+15"
+                if reviseField.sweetAlmond == true{
+                    cell.addCheckImageView.image = UIImage(systemName: "checkmark.circle")
+                }else{
+                    cell.addCheckImageView.image = UIImage(systemName: "circle")
+                }
             }
             return cell
         }
-        
 
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var reviseDrinkField = reviseDrink.fields
+        if reviseTableView.indexPathForSelectedRow?.section == 3{
+            if reviseTableView.indexPathForSelectedRow?.row == 0{
+                if reviseDrinkField.whiteBubble == false{
+                    reviseDrinkField.price! += 10
+                    reviseDrinkField.whiteBubble = true
+                    print(reviseDrinkField.whiteBubble!,reviseDrinkField.price!)
+                }else{
+                    reviseDrinkField.price! -= 10
+                    reviseDrinkField.whiteBubble = false
+                    print(reviseDrinkField.whiteBubble!,reviseDrinkField.price!)
+                    
+                }
+            }
+            if reviseTableView.indexPathForSelectedRow?.row == 1{
+                if reviseDrinkField.whiteJelly == false{
+                    reviseDrinkField.price! += 10
+                    reviseDrinkField.whiteJelly = true
+                    print(reviseDrinkField.whiteJelly!,reviseDrinkField.price!)
+                }else{
+                    reviseDrinkField.price! -= 10
+                    reviseDrinkField.whiteJelly = false
+                    print(reviseDrinkField.whiteJelly!,reviseDrinkField.price!)
+                    
+                }
+            }
+            if reviseTableView.indexPathForSelectedRow?.row == 2 {
+                if reviseDrinkField.sweetAlmond == false{
+                    reviseDrinkField.price! += 15
+                    reviseDrinkField.sweetAlmond = true
+                    print(reviseDrinkField.sweetAlmond!,reviseDrinkField.price!)
+                }else{
+                    reviseDrinkField.price! -= 15
+                    reviseDrinkField.sweetAlmond = false
+                    print(reviseDrinkField.sweetAlmond!,reviseDrinkField.price!)
+                    
+                }
+            }
+        }
+        reviseTableView.reloadData()
     }
  
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
