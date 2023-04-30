@@ -68,6 +68,9 @@ class DetailViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tapGesture)
         super.viewDidLoad()
         if allDrinks.isEmpty{
             addCartNReviseButtonOutlet.setTitle("修改", for: .normal)
@@ -86,7 +89,48 @@ class DetailViewController: UIViewController {
             drinkTitleName.text = allDrinks[indexPathRowNum].fields.name
             totalMoney.text = "共 NT 0 $"
         }
+        
+        //加入textField的 delegate
+        orderHumanTextField.delegate = self
+
+        
+        // 測試畫面隨鍵盤改變位置
+        // 監聽鍵盤彈出事件
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+         
+         // 監聽鍵盤收起事件
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
     }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        let keyboardHeight = keyboardFrame.height
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame.origin.y = -keyboardHeight+89
+        }
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        UIView.animate(withDuration: 0.3) {
+            self.view.frame.origin.y = 0
+        }
+    }
+//    這兩個方法會在鍵盤彈出和收起時分別被調用。在 keyboardWillShow 方法中，我們取得鍵盤的高度，並使用 UIView.animate 方法來讓畫面上移，以便讓使用者能夠輸入資料。在 keyboardWillHide 方法中，我們將畫面位置恢復原狀，讓使用者能夠正常操作畫面。
+//
+//    最後，在 deinit 方法中取消註冊 NotificationCenter：
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+//    這樣，在離開當前頁面時就不會繼續監聽鍵盤事件了。
+
+
+
+
+
+
 
     func addUISwitchReivseSet(){
         if reviseDrink.fields.whiteBubble == true{
@@ -196,7 +240,15 @@ class DetailViewController: UIViewController {
                     //加入成功加入的alert
                     let controller = UIAlertController(title: "已加入購物車", message: "記得付$\(price)", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .default)
+                    
+//                    let nextAction = UIAlertAction(title: "OK", style: .default) { action in
+//                        // 跳轉到下一頁的程式碼
+//                        let nextViewController = KebukeMainViewController()
+//                        self.navigationController?.pushViewController(nextViewController, animated: true)
+//                    }
+                    
                     controller.addAction(action)
+//                    controller.addAction(nextAction) // 不管是跳到shopcart還是 kebukeMainViewcontroller delegate都會error，待釐清，暫時不使用翻頁功能。
                     present(controller, animated: true)
                 }
                 // 出現alert請填寫訂購者稱呼
@@ -450,4 +502,11 @@ class DetailViewController: UIViewController {
     }
 
 
-// 修正在按下ＣＥＬＬ後 UISWITCH 並不會隨者原有內容作變動，會造成資料不正確。
+extension DetailViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        orderHumanTextField.resignFirstResponder()
+//        orderHumanTextField.endEditing(true)
+        return true
+    }
+
+}
