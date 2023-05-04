@@ -68,10 +68,10 @@ class DetailViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tapGesture)
-        super.viewDidLoad()
         if allDrinks.isEmpty{
             addCartNReviseButtonOutlet.setTitle("修改", for: .normal)
             fetchGetData()
@@ -203,14 +203,14 @@ class DetailViewController: UIViewController {
     }
     
     func addSwitchState(){
-         addShopCart.whiteBubble = whiteBubbleState
+        addShopCart.whiteBubble = whiteBubbleState
         addShopCart.whiteJelly = whiteJellyState
         addShopCart.sweetAlmond = sweetAlmondState
         totalMoney.text = "共 NT \(price) $"
         }
 
     
-    // 要加入判定是修改還是新增，還沒加
+    
     @IBAction func addChooseList(_ sender: UIButton) {
         if allDrinks.isEmpty{
             if orderHumanTextField.text != ""{
@@ -427,13 +427,23 @@ class DetailViewController: UIViewController {
         var rowNumLargePrice = ""
         
         if allDrinks.isEmpty{
+            
              rowNum = allDrinksToRevise[indexPathRowNum].fields.size
-             rowNumMidPrice = allDrinksToRevise[indexPathRowNum].fields.midPrice
-            rowNumLargePrice = allDrinksToRevise[indexPathRowNum].fields.largePrice!
+            if rowNum.count == 2{
+                rowNumMidPrice = allDrinksToRevise[indexPathRowNum].fields.midPrice
+                rowNumLargePrice = allDrinksToRevise[indexPathRowNum].fields.largePrice!
+            }else{
+                rowNumMidPrice = allDrinksToRevise[indexPathRowNum].fields.midPrice
+            }
+                
         }else{
              rowNum = allDrinks[indexPathRowNum].fields.size
-             rowNumMidPrice = allDrinks[indexPathRowNum].fields.midPrice
-            rowNumLargePrice = allDrinks[indexPathRowNum].fields.largePrice!
+            if rowNum.count == 2{
+                rowNumMidPrice = allDrinks[indexPathRowNum].fields.midPrice
+                rowNumLargePrice = allDrinks[indexPathRowNum].fields.largePrice!
+            }else{
+                rowNumMidPrice = allDrinks[indexPathRowNum].fields.midPrice
+            }
         }
         addShopCart.price = Int(rowNumMidPrice)
         if rowNum.count == 2{
@@ -505,7 +515,6 @@ class DetailViewController: UIViewController {
 extension DetailViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         orderHumanTextField.resignFirstResponder()
-//        orderHumanTextField.endEditing(true)
         return true
     }
 

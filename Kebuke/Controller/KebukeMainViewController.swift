@@ -38,7 +38,6 @@ class KebukeMainViewController: UIViewController {
                 detailVC.indexPathRowNum = kebukeTableView.indexPathForSelectedRow?.row ?? 0
             }
 
-
     }
     
 
